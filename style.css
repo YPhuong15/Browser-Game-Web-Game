@@ -1,0 +1,49 @@
+body {
+    background-image: url("./imgs/home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: inherit;
+    background-color: lavender;
+}
+
+.welcome-board {
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    padding-bottom: 50px;
+    line-height: 150%;
+
+}
+
+h1 {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 70px;
+    line-height: normal;
+}   
+
+.container {
+    font-family: 'VT323', monospace;
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px beige;
+    margin: 10px;
+    text-decoration: none;
+    color: pink;
+    border: 1px dotted whitesmoke;
+    margin: 25px;
+}
+
+.choice {
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    text-align: center;
+}
