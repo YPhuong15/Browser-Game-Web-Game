@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lavender;
+    text-align: center;
+    background-image: url(../imgs/sky.png), linear-gradient(silver, rgb(60, 26, 70));
+    background-size: 100%;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.container {
+    box-sizing: border-box;
+    box-shadow: 1px 2px 10px whitesmoke;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 150px auto;
+    height: 60%;
+    width: 75%;
+    background-color: rgb(101, 145, 173);
+    opacity: 0.7;
+}
+
+.question-number {
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    animation: blinking 1.2s infinite;
+}
+
+.question-container {
+    font-family: 'Share Tech Mono', monospace;
+    color: white;
+    font-size: 25px;
+}
+
+.choice-container {
+    display: flex;
+    border: 1.5px solid purple;
+    margin-bottom: 7px;
+    width: 100%;
+    color: whitesmoke;
+}
+
+.choice-letter {
+    padding: 20px 20px;
+    font-size: 30px;
+    margin: 0;
+    background-color: paleturquoise;
+    border-right: 1px solid purple;
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    animation: fadeIn 0.7s ease both;
+}
+
+.choice-text {
+    padding-top: 5px;
+    margin: 10px 20px;
+    font-size: 30px;
+    font-family: 'Chakra Petch', sans-serif;
+    animation: fadeIn 0.7s ease both;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 3px 4px 5px violet;
+    background-color: paleturquoise;
+    transform: translateY(2px);
+    color: black;
+}
+
+.btn {
+    position: fixed;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 3px 4px 5px beige;
+    text-decoration: none;
+    color: black;
+    border: 1px solid palevioletred;
+    border-radius: 5px;
+    margin: 25px;
+    padding: 10px 35px;
+    opacity: 0.8;
+    bottom: 0;
+    right: 0;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.correct {
+    background-color: aquamarine;
+}
+
+.wrong {
+    background-color: brown;
+}
+.progressBar {
+    border: 1px solid white;
+    border-right: none;
+    border-radius: 50px;
+    position: relative;
+}
+.boxes {
+    display: flex;
+    width: 100%;
+}
+
+.progress-inner {
+    position: abosulte;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.progress-inner > img {
+    width: 20%;
+    position: absolute;
+    bottom: 0px;
+}
+.box {
+    height:40px;
+    border-right: 1px solid white;
+    flex:1;
+}
+
+@keyframes blinking {
+    0% {opacity: 0.6}
+    25% {opacity: 0.8}
+    50% {opacity: 0.7}
+    75% {opacity: 0.5}
+    100% {opacity: 0.4}
+}
+
+@keyframes fadeIn {
+    to {opacity: 1}
+    from {opacity: 0}
+}

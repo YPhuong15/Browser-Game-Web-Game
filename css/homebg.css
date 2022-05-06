@@ -1,0 +1,107 @@
+
+.astro {
+    width: 300px;
+    bottom: 40px;
+    left: 30px;
+    animation: float 6s linear infinite;
+    position: fixed;
+    z-index: 3;
+}
+
+.saturn {
+    width: 200px;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    animation: spin 3s linear infinite;
+}
+
+
+.planet {
+    width: 200px;
+    position: fixed;
+    top: 20px;
+    left: 200px;
+    opacity: 0.8;
+    animation: zooming 10s linear infinite;
+}
+
+.moon {
+    width: 600px;
+    position: absolute;
+    top: -150px;
+    right: 10px;
+    animation: moon 10s ease-in-out infinite;
+    z-index: 3;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateX(0px) rotate(-10deg);
+
+    }
+
+    50% {
+        transform: translateX(-30px) rotateY(10deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(20deg);
+    }
+}
+
+@keyframes moon {
+    0% {
+        opacity: 0.4;
+    }
+
+    25% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: skewY(10deg);
+    }
+
+    to {
+        transform: skewY(180deg);
+    }
+}
+
+@keyframes zooming {
+    0% {
+        width: 250px;
+    }
+
+    25% {
+        width: 230px;
+    }
+
+    50% {
+        width: 260px;
+        transform: rotate(5deg);
+    }
+
+    75% {
+        width: 240px;
+    }
+
+    100% {
+        width: 250px;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <title>Sky of Knowledge - Cassiopeia</title>
+    <link href="../css/game.css" rel="stylesheet">
+    <link href="../css/gamebg.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background">
+        <div class="objects">
+            <img src="../imgs/astronaut.png" alt="astronaut" class="astro">
+            <img src="../imgs/saturn.png" alt="saturn" class="saturn">
+            <img src="../imgs/planet.png" alt="planet" class="planet">
+            <img src="../imgs/moon.png" alt="moon" class="moon">
+        </div>
+    </div>
+    <div class="container">
+        <div class="question-number">
+
+        </div>
+        <hr>
+        <div class="question-container">
+            <h2 id="question">Here is the question</h2>
+        </div>
+        <div class="choice-container">
+            <p class="choice-letter">A</p>
+            <p class="choice-text" id="op1"></p>
+        </div>
+        <div class="choice-container">
+            <p class="choice-letter">B</p>
+            <p class="choice-text" id="op2"></p>
+        </div>
+        <div class="choice-container">
+            <p class="choice-letter">C</p>
+            <p class="choice-text" id="op3"></p>
+        </div>
+        <div class="choice-container">
+            <p class="choice-letter">D</p>
+            <p class="choice-text" id="4"></p>
+        </div>
+    </div>
+    <button type="button" class="btn" onclick=nextQ()>Next</button>
+    <script src="../js/set2.js"></script>
+</body>
+
+</html>
