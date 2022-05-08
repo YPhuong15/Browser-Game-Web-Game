@@ -29,21 +29,19 @@ const quizData = [
 
 ]
 
-
-const questionNum = document.querySelector('.question-number')
-const question = document.getElementById('question')
+const questionNum = document.querySelector('.question-number');
+const question = document.getElementById('question');
+const runningProgress = document.getElementById('progress-inner');
+const gameScore = document.getElementById('score');
 
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestion = [];
-//let availableOptions = [];
+
 let score = 0;
+const bonus = 10;
 
-const opt1 = document.querySelector(".op1")
-const opt2 = document.querySelector(".op2")
-const opt3 = document.querySelector(".op3")
-const opt4 = document.querySelector(".op4")
-
+const maxQ = 5;
 
 function setAvailableQuestions() {
     const totalQuestion = quizData.length;
@@ -69,39 +67,42 @@ function getNewQuestion() {
         element.textContent = currentQuestion.options[index];
         element.addEventListener('click', function () {
             if (currentQuestion.correct === index) {
-                console.log('Correct Answer!');
-                score++;
-                console.log(score);
-                element.parentElement.classList.add("correct");
             } else {
                 console.log('Wrong Answer!');
-                element.parentElement.classList.add("wrong");
+           }
+
+            const accurateClass = index == currentQuestion.correct ? "correct" : "wrong";
+            
+            element.parentElement.classList.add(accurateClass);
+            if (accurateClass === "correct") {
+                updateScore(bonus)
             }
             setTimeout(() => {
-                element.parentElement.classList.remove();
-                nextQ();
-            },1000);
+                element.parentElement.classList.remove(accurateClass)
+            }, 2000);
         });
-        
+
     });
     questionCounter++;
+    //runningProgress.style.width = `${(questionCounter / maxQ) * 100}%`;
+}
 
+updateScore = num => {
+    score += num;
+    gameScore.innerText = score;
 }
 
 function nextQ() {
-    if (questionCounter === availableQuestion.length) {
+    if (availableQuestion.length === 0) {
         console.log('Quiz over')
         //return window.location.assign('/end.html');
     }
     else {
         getNewQuestion();
     }
-    
 }
+
 
 setAvailableQuestions()
 getNewQuestion()
-
-
-
 

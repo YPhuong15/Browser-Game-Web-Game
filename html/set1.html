@@ -19,15 +19,19 @@
     <div class="background">
         <div class="objects">
             <img src="../imgs/astronaut.png" alt="astronaut" class="astro">
-            <img src="../imgs/saturn.png" alt="saturn" class="saturn">
+            <img src="../imgs/planetglow.png" alt="planetglow" class="glow">
             <img src="../imgs/planet.png" alt="planet" class="planet">
             <img src="../imgs/moon.png" alt="moon" class="moon">
         </div>
     </div>
-    <div class="container">
-        <div class="question-number">
-
+    <div class="scoreboard">
+        <div class="score">
+            <h2 class="score-text">Score</h2>
+            <h1 id="score">0</h1>
         </div>
+    </div>
+    <div class="container">
+        <div class="question-number"></div>
         <hr>
         <div class="question-container">
             <h2 id="question">Here is the question</h2>
@@ -49,22 +53,12 @@
             <p class="choice-text" id="4"></p>
         </div>
     </div>
-    
+    <div class="progressBar">
+        <div class="progress-inner"></div>
+    </div>
     <button type="button" class="btn" onclick=nextQ()>Next</button>
     <script src="../js/set1.js"></script>
 </body>
 
 </html>
-<!--
-<div class="progressBar">
-    <div class="boxes">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </div>
-   
-    <div class="progress-inner"> <img src="../imgs/spaceship.png"></div>
-</div>
--->>
+

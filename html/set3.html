@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-witch, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -12,30 +12,47 @@
         rel="stylesheet">
     <title>Sky of Knowledge - Ursa Minor</title>
     <link href="../css/game.css" rel="stylesheet">
-
-
+    <link href="../css/gamebg.css" rel="stylesheet">
 </head>
 
 <body>
+    <div class="background">
+        <div class="objects">
+            <img src="../imgs/astronaut.png" alt="astronaut" class="astro">
+            <img src="../imgs/saturn.png" alt="saturn" class="saturn">
+            <img src="../imgs/planet.png" alt="planet" class="planet">
+            <img src="../imgs/moon.png" alt="moon" class="moon">
+        </div>
+    </div>
     <div class="container">
+        <div class="question-number">
+
+        </div>
+        <hr>
         <div class="question-container">
             <h2 id="question">Here is the question</h2>
         </div>
         <div class="choice-container">
             <p class="choice-letter">A</p>
-            <p class="choice-text">Choice1</p>
+            <p class="choice-text" id="op1"></p>
         </div>
         <div class="choice-container">
             <p class="choice-letter">B</p>
-            <p class="choice-text">Choice2</p>
-        </div>
-        <div class="choice-container">
-            <p class="choice-letter">C</p>
-            <p class="choice-text">Choice3</p>
-        </div>
-        <div class="choice-container">
-            <p class="choice-letter">D</p>
-            <p class="choice-text">Choice4</p>
-        </div>
+            <p class="choice-text" id="op2"></p>
     </div>
+    <div class="progressBar">
+        <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="progress-inner"></div>
+    </div>
+    <button type="button" class="btn" onclick=nextQ()>Next</button>
+    <script src="../js/set3.js"></script>
 </body>
+
+</html>
+
