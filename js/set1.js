@@ -37,6 +37,7 @@ const gameScore = document.getElementById('score');
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestion = [];
+let correctCounter = 0;
 
 let score = 0;
 const bonus = 10;
@@ -59,38 +60,47 @@ function getNewQuestion() {
     const questionIndex = Math.floor(Math.random() * availableQuestion.length);
     currentQuestion = availableQuestion[questionIndex];
     question.innerHTML = currentQuestion.q;
-    availableQuestion.splice(questionIndex, 1);
 
     let choice = document.querySelectorAll('.choice-text');
-
     choice.forEach(function (element, index) {
         element.textContent = currentQuestion.options[index];
-        element.addEventListener('click', function () {
-            if (currentQuestion.correct === index) {
-            } else {
-                console.log('Wrong Answer!');
-           }
+    });
+    availableQuestion.splice(questionIndex, 1);
+    //questionCounter++;
+    let accurateClass;
 
-            const accurateClass = index == currentQuestion.correct ? "correct" : "wrong";
-            
-            element.parentElement.classList.add(accurateClass);
-            if (accurateClass === "correct") {
-                updateScore(bonus)
+    choice.forEach(function (element, index) {
+
+        element.addEventListener('click', function () {
+            if (index === currentQuestion.correct) {
+                correctCounter++;
+                accurateClass = "correct"
+                element.parentElement.classList.add(accurateClass);
+                console.log(correctCounter)
+                updateScore(bonus, correctCounter)
+                console.log("Correct!")
+            } else {
+                accurateClass = "wrong"
+                element.parentElement.classList.add(accurateClass)
             }
+
+            //console.log(questionCounter);
             setTimeout(() => {
-                element.parentElement.classList.remove(accurateClass)
+                element.parentElement.classList.remove(accurateClass);
+                nextQ();
             }, 2000);
         });
-
     });
+
     questionCounter++;
-    //runningProgress.style.width = `${(questionCounter / maxQ) * 100}%`;
+    console.log(questionCounter);
 }
 
-updateScore = num => {
-    score += num;
-    gameScore.innerText = score;
-}
+
+updateScore = (bonus, correctCounter) => {
+    score = bonus * correctCounter;
+    gameScore.innerHTML = score;
+};
 
 function nextQ() {
     if (availableQuestion.length === 0) {
