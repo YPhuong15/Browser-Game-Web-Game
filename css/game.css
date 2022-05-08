@@ -17,7 +17,7 @@ body {
     border: 1px solid grey;
     border-radius: 5px;
     padding: 15px;
-    margin: 150px auto;
+    margin: 170px auto 70px auto;
     height: 60%;
     width: 75%;
     background-color: rgb(101, 145, 173);
@@ -28,6 +28,7 @@ body {
     color: black;
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
+    opacity: 0.8;
     animation: blinking 1.2s infinite;
 }
 
@@ -98,38 +99,28 @@ body {
 
 .correct {
     background-color: aquamarine;
+    animation: blinking 0.2s infinite;
 }
 
 .wrong {
-    background-color: brown;
+    background-color: rgb(160, 19, 19);
+    animation: blinking 0.2s infinite;
 }
 .progressBar {
+    width: 45rem;
+    height: 3rem;
+    text-align: center;
     border: 1px solid white;
-    border-right: none;
-    border-radius: 50px;
-    position: relative;
-}
-.boxes {
-    display: flex;
-    width: 100%;
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .progress-inner {
-    position: abosulte;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-.progress-inner > img {
-    width: 20%;
-    position: absolute;
-    bottom: 0px;
-}
-.box {
-    height:40px;
-    border-right: 1px solid white;
-    flex:1;
+    width: 0%;
+    height: 2.5rem;
+    background-color: aqua;
 }
 
 @keyframes blinking {
@@ -137,7 +128,7 @@ body {
     25% {opacity: 0.8}
     50% {opacity: 0.7}
     75% {opacity: 0.5}
-    100% {opacity: 0.4}
+    100% {opacity: 0.1}
 }
 
 @keyframes fadeIn {

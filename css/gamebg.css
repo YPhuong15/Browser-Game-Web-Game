@@ -5,15 +5,14 @@
     left: 30px;
     animation: float 6s linear infinite;
     position: fixed;
-    z-index: 1;
 }
 
-.saturn {
-    width: 150px;
+.glow {
+    width: 180px;
     position: absolute;
-    bottom: 80px;
-    right: 600px;
-    opacity: 0.8;
+    bottom: 100px;
+    left: 600px;
+    opacity: 0.5;
 }
 
 .planet {
@@ -28,7 +27,7 @@
 .moon {
     width: 700px;
     position: absolute;
-    bottom: -10px;
+    bottom: 20px;
     right: 150px;
     opacity: 0.5;
     transform: rotateY(-180deg);
